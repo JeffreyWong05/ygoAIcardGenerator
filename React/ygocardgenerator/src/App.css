@@ -77,6 +77,20 @@
   margin-right: 8%;
 }
 
+.attackDefense {
+  display: flex;
+  margin-left: 63%;
+  /*10.45% 44px*/
+  /*10.45% 44px*/
+  font-weight: bolder;
+  margin-top: -1px;
+}
+
+.attack {
+  width: 26%;
+  margin-right: 29%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

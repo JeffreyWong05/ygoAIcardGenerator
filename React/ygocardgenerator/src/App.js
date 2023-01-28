@@ -18,8 +18,8 @@ function App() {
 		level: '1',
     type: '',
 		attribute: '',
-    atk: '0',
-    def:'0'
+    atk: '',
+    def:''
 	});
 	const [loading, setLoading] = useState(false);
 
@@ -33,6 +33,14 @@ function App() {
     "wind": require('./images/Wind.webp'),
     "": null,
   }
+
+  const quickAttributeMap = (attribute) => {
+    if (attributeDict[attribute.toLowerCase().trim()] === undefined) {
+      return attributeDict["divine"]
+    }
+    return attributeDict[attribute.toLowerCase().trim()]
+  }
+
   const prompts = {
     image: `${cardName}, digital art`,
 		effect: `Write a YuGiOh effect for a card named "${cardName}"
@@ -70,8 +78,8 @@ function App() {
       level: '1',
       type: '',
       attribute: '',
-      atk: '0',
-      def:'0'
+      atk: '',
+      def:''
     });
 		setLoading(true);
 		let response;
@@ -169,9 +177,9 @@ function App() {
         <div className="yugiohTemplate">
           <div className="nameAndAttribute">
 		  	<TextShrinker className="yugName" text={cardName} />
-            {results.attribute.trim() === "" 
-            ? null 
-            : <img src={attributeDict[results.attribute.toLowerCase().trim()]} className="attribute"></img>}
+            {results.attribute.trim() === ""
+            ? null
+            : <img src={quickAttributeMap(results.attribute)} className="attribute"></img>}
           </div>
 		  <div class="level-container">
             {createLevelImage(parseInt(results.level))}
@@ -183,12 +191,11 @@ function App() {
             ? <div className='cardType'/>
             : <div className='cardType'>{`[${results.type.toUpperCase()} ${someFunc()} / EFFECT ]`}</div>}
 		   <EffectText className="effectText" text={results.effect} />
+       <div className='attackDefense'>
+        <div className='attack'>{results.atk}</div>
+        <div>{results.def}</div>
+		   </div>
         </div>
-		<div style={{backgroundColor: "white"}}>
-		{displayResults()}
-            
-          </div>
-        
       </div>
       <img className="yugiImg" 
         src={yugi} 
