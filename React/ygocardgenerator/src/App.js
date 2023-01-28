@@ -129,9 +129,6 @@ function App() {
       <div className="lcol">
         <div className="yugiohTemplate">
           <div className="nameAndAttribute">
-          <div class="flex-container">
-            {createLevelImage(levelNum)}
-          </div>
             <div className="yugName">
               {cardName}
             </div>
@@ -142,10 +139,13 @@ function App() {
 		  <div class="level-container">
             {createLevelImage(cardLevel)}
           </div>
-          <div>
+		  {results.image === "" 
+            ? <div className='cardImage'/> 
+            : <img src={results.image} className="cardImage"></img>}
+        </div>
+		<div style={{backgroundColor: "white"}}>
             {displayResults()}
           </div>
-        </div>
         
         
       </div>
