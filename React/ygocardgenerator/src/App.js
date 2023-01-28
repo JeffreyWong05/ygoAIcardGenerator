@@ -11,6 +11,7 @@ import TextShrinker from './TextShrinker';
 function App() {
 
   const [cardName, setCardName] = useState('');
+  const [synchro, setSynchro] = useState("");
   const [results, setResults] = useState({
 		effect: '',
 		image: '',
@@ -161,9 +162,9 @@ function App() {
 
 	  <div className="entry">
         <label>Make this a synchro?:</label>
-        <input className="monsterName" type="checkbox" onChange={(e) => setCardName(e.target.value)}/>
+        <input className="monsterName" type="checkbox" onChange={(e) => setSynchro(e.target.value)}/>
         <button className='button' onClick={generateDetails}>
-					Generate Card
+					Is synchro
 				</button>
       </div>
 
