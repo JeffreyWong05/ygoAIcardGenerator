@@ -150,6 +150,9 @@ function App() {
 		  {results.image === "" 
             ? <div className='cardImage'/> 
             : <img src={results.image} className="cardImage"></img>}
+      {results.type === ""
+            ? <div className='cardType'/>
+            : <div className='cardType'>[{results.type.toUpperCase()} / EFFECT ]</div>}
         </div>
 		<div style={{backgroundColor: "white"}}>
             {displayResults()}
