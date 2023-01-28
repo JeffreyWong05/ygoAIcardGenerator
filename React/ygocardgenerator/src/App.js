@@ -15,7 +15,9 @@ function App() {
 		image: '',
 		level: '1',
     type: '',
-		attribute: ''
+		attribute: '',
+    atk: '0',
+    def:'0'
 	});
 	const [loading, setLoading] = useState(false);
 
@@ -46,6 +48,12 @@ function App() {
 		Example:Fire
 		YuGiOh card:"${cardName}"
 		Attribute:`,
+    atk:`Write the attack value for the YuGiOh card.
+		YuGiOh card:"${cardName}"
+		Attack:`,
+		def:`Write the defense value for the YuGiOh card.
+		YuGiOh card:"${cardName}"
+		Defense:`
 	};
 	const configuration = new Configuration({
 		apiKey: `${process.env.REACT_APP_API_KEY}`
@@ -61,7 +69,9 @@ function App() {
       image: '',
       level: '1',
       type: '',
-      attribute: ''
+      attribute: '',
+      atk: '0',
+      def:'0'
     });
 		setLoading(true);
 		let response;
