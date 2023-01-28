@@ -1,3 +1,8 @@
+:root{
+  --backgroundMonster: url("./images/effectMonsterImage.png");
+  /*--backgroundSynchro: url("./images/CardSynchroBackground.png");
+*/}
+
 .title {
   font-family: 'Courier New', Courier, monospace;
   background-image: linear-gradient(to left, blue, green, white);
@@ -22,7 +27,7 @@
 }
 
 .yugiohTemplate {
-  background-image: url("./images/effectMonsterImage.png");
+  background-image: var(--backgroundMonster);
   width: 421px;
   /*421px*/
   height: 614px;

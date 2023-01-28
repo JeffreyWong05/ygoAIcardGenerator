@@ -12,6 +12,7 @@ import EffectText from './EffectText';
 function App() {
 
   const [cardName, setCardName] = useState('');
+  const [synchro, setSynchro] = useState("");
   const [results, setResults] = useState({
     image: '',
 		effect: '',
@@ -170,6 +171,14 @@ function App() {
         <input className="monsterName" type="text" maxLength="33" onChange={(e) => setCardName(e.target.value)}/>
         <button className='button' onClick={generateDetails}>
 					Generate Card
+				</button>
+      </div>
+
+	  <div className="entry">
+        <label>Make this a synchro?:</label>
+        <input className="monsterName" type="checkbox" onChange={(e) => setSynchro(e.target.value)}/>
+        <button className='button' onClick={generateDetails}>
+					Is synchro
 				</button>
       </div>
 
