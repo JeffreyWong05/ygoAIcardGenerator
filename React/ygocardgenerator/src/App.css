@@ -34,6 +34,14 @@
   height: 614px
 }
 
+.yugiohTemplate .nameAndAttribute {
+  font-weight: bold;
+  font-size: 28px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 30px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

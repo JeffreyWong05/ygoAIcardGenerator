@@ -5,6 +5,12 @@ function App() {
   return (
     <div>
       <div className="yugiohTemplate">
+        <div className="nameAndAttribute">
+        <div className="yugName">
+          Zexi the Invoker
+        </div>
+
+        </div>
 
       </div>
     </div>
