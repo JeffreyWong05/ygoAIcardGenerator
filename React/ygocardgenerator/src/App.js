@@ -11,7 +11,7 @@ function App() {
 
   const [cardName, setCardName] = useState('');
   const [cardAttribute, setCardAttribute] = useState("wind")
-  const [levelNum, setCardLevel] = useState("");
+  const [cardLevel, setCardLevel] = useState("");
   const [results, setResults] = useState({
 		effect: '',
 		image: '',
@@ -98,7 +98,7 @@ function App() {
       i <= numlevel;
       i++
     ) {
-      levelArray.push(<img src={level} alt="level image" />)
+      levelArray.push(<img src={level} alt="level image" className='levelIcon'/>)
     }
 
     return levelArray.map((e) => (e))
@@ -139,12 +139,12 @@ function App() {
             ? null 
             : <img src={attributeDict[cardAttribute]} className="attribute"></img>}
           </div>
+		  <div class="level-container">
+            {createLevelImage(cardLevel)}
+          </div>
           <div>
             {displayResults()}
           </div>
-          
-          
-
         </div>
         
         
