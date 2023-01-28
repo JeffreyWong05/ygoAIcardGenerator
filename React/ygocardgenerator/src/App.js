@@ -123,6 +123,17 @@ function App() {
 
   }
 
+ const someFunc = () =>
+ {
+  console.log("tuner called");
+  let isTuner = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+  
+  if(isTuner === 2){
+    return "/ TUNER";
+  }
+  return "";
+ }
+
   return (
     <div className="page">
       <h1 className="title">Yugioh Card Generator</h1>
@@ -152,7 +163,7 @@ function App() {
             : <img src={results.image} className="cardImage"></img>}
       {results.type === ""
             ? <div className='cardType'/>
-            : <div className='cardType'>[{results.type.toUpperCase()} / EFFECT ]</div>}
+            : <div className='cardType'>{`[${results.type.toUpperCase()} ${someFunc()} / EFFECT ]`}</div>}
         </div>
 		<div style={{backgroundColor: "white"}}>
             {displayResults()}
