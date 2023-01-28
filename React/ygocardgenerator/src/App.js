@@ -168,16 +168,16 @@ function App() {
       <h1 className="title">Yugioh Card Generator</h1>
       <div className="entry">
         <label>Enter Card Name:</label>
-        <input className="monsterName" type="text" maxLength="33" onChange={(e) => setCardName(e.target.value)}/>
-        <button className='button' onClick={generateDetails}>
+        <input disabled={loading} className="monsterName" type="text" maxLength="33" onChange={(e) => setCardName(e.target.value)}/>
+        <button disabled={loading} className='button' onClick={generateDetails}>
 					Generate Card
 				</button>
       </div>
 
 	  <div className="entry">
         <label>Make this a synchro?:</label>
-        <input className="monsterName" type="checkbox" onChange={(e) => setSynchro(e.target.value)}/>
-        <button className='button' onClick={generateDetails}>
+        <input disabled={loading} className="monsterName" type="checkbox" onChange={(e) => setSynchro(e.target.value)}/>
+        <button disabled={loading} className='button' onClick={generateDetails}>
 					Is synchro
 				</button>
       </div>
