@@ -4,27 +4,9 @@ import React from 'react';
 import { useState } from 'react';
 
 function AppJeff() {
-    const [name, setName] = useState("");
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        //alert(`The name you entered was: ${name}`)
-        this.setState({ number: name });
-      }
-
-  return (
+  return ( //All 12 levels to be decided to be displayed
     <div>
-        <form onSubmit={handleSubmit}>
-      <label>Enter your name:
-        <input 
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <input type="submit" />
-    </form>
-
     <div class="flex-container">
         <div className="level1">
             <img src={level} alt="level image" />
