@@ -13,6 +13,19 @@
     /*2% 9px*/
 }
 
+.cardImage {
+    margin-left: 12.11%;
+    /*12.11% 51px*/
+    margin-right: 51px;
+    /*12.11% 51px*/
+    width: 76%;
+    /*76% 320px*/
+    height: 52.28%;
+    /*52.28% 321px*/
+    margin-top: 12px;
+    /*12px*/
+}
+
 .levelIcon {
     width: 7.5%;
     /*7.25% 25px*/
