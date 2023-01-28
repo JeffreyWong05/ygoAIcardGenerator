@@ -1,7 +1,11 @@
 import './App.css';
 import yugi from './images/yamiyugi.png';
+import React, { useState } from 'react';
 
 function App() {
+
+  const [cardName, setCardName] = useState('');
+  const [cardAttribute, setCardAttribute] = useState("")
 
   const attributeDict = {
     "dark": require('./images/Dark.webp'),
@@ -11,6 +15,7 @@ function App() {
     "light": require('./images/Light.webp'),
     "water": require('./images/Water.png'),
     "wind": require('./images/Wind.webp'),
+    "": null,
   }
 
   return (
@@ -18,17 +23,19 @@ function App() {
       <h1 className="title">Yugioh Card Generator</h1>
       <div className="entry">
         <label>Enter Card Name:</label>
-        <input className="monsterName" type="text"/>
-        <input type="submit" value="Submit" />
+        <input className="monsterName" type="text" onChange={(e) => setCardName(e.target.value)}/>
+        <input type="submit" value="Submit"/>
       </div>
 
       <div className="lcol">
         <div className="yugiohTemplate">
           <div className="nameAndAttribute">
           <div className="yugName">
-            Zexi the Invoker
+            {cardName}
           </div>
-          <img src={attributeDict["earth"]} className="attribute"></img>
+          {cardAttribute === "" 
+          ? null 
+          : <img src={attributeDict[cardAttribute]} className="attribute"></img>}
           </div>
         </div>
       </div>
