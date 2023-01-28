@@ -10,12 +10,12 @@ import { Configuration, OpenAIApi } from 'openai';
 function App() {
 
   const [cardName, setCardName] = useState('');
-  const [cardAttribute, setCardAttribute] = useState("wind")
-  const [cardLevel, setCardLevel] = useState("");
   const [results, setResults] = useState({
 		effect: '',
 		image: '',
-		level: ''
+		level: '1',
+    type: '',
+		attribute: ''
 	});
 	const [loading, setLoading] = useState(false);
 
@@ -32,10 +32,20 @@ function App() {
   const prompts = {
 		effect: `Write a YuGiOh effect for a card named "${cardName}"
         Effect:`,
-		image: cardName,
-		level: `Rate the YuGiOh card\'s strength from 1 to 12 
+		image: `${cardName}, digital art`,
+		level: `Rate the YuGiOh card\'s strength. 
+		Desired format:
+		Strength:<a number that is greater 0 but less than 13>
         YuGiOh card:"${cardName}"
-        Strength:`
+        Strength:`,
+		type: `Write the monster type of the YuGiOh card. 
+		Example:Warrior
+		YuGiOh card:"${cardName}"
+		Type:`,
+		attribute: `Write the attribute of the YuGiOh card.
+		Example:Fire
+		YuGiOh card:"${cardName}"
+		Attribute:`,
 	};
 	const configuration = new Configuration({
 		apiKey: `${process.env.REACT_APP_API_KEY}`
@@ -46,6 +56,13 @@ function App() {
   const generateDetails = async () =>
   {
     console.log("generate");
+    setResults({
+      effect: '',
+      image: '',
+      level: '1',
+      type: '',
+      attribute: ''
+    });
 		setLoading(true);
 		let response;
 
@@ -85,6 +102,7 @@ function App() {
 				{results[key]}
 				<br />
 				<br />
+        {results.attribute.toLowerCase()}
 			</div>
 		));
 	};
@@ -115,16 +133,6 @@ function App() {
 					Generate Card
 				</button>
       </div>
-      <div className="entry">
-        <label>Enter Card Level:</label>
-        <input className="monsterName" type="text" onChange={(e) => setCardLevel(e.target.value)}/>
-        <input type="submit" value="Submit"/>
-      </div>
-      <div className="entry">
-        <label>Enter Card Level:</label>
-        <input className="monsterName" type="text" onChange={(e) => setCardLevel(e.target.value)}/>
-        <input type="submit" value="Submit"/>
-      </div>
 
       <div className="lcol">
         <div className="yugiohTemplate">
@@ -132,12 +140,12 @@ function App() {
             <div className="yugName">
               {cardName}
             </div>
-            {cardAttribute === "" 
+            {results.attribute.toLowerCase() === "" 
             ? null 
-            : <img src={attributeDict[cardAttribute]} className="attribute"></img>}
+            : <img src={attributeDict[results.attribute.toLowerCase()]} className="attribute"></img>}
           </div>
 		  <div class="level-container">
-            {createLevelImage(cardLevel)}
+            {createLevelImage(parseInt(results.level))}
           </div>
 		  {results.image === "" 
             ? <div className='cardImage'/> 

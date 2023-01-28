@@ -6,17 +6,27 @@ function DetailsGenerator() {
 	const [results, setResults] = useState({
 		effect: '',
 		image: '',
-		level: ''
+		level: '',
+		type: '',
+		attribute: ''
 	});
 	const [loading, setLoading] = useState(false);
 
 	const prompts = {
 		effect: `Write a YuGiOh effect for a card named "${name}"
         Effect:`,
-		image: name,
-		level: `Rate the YuGiOh card\'s strength from 1 to 12 
+		image: `${name}, digital art`,
+		level: `Rate the YuGiOh card\'s strength from 1 to 12
         YuGiOh card:"${name}"
-        Strength:`
+        Strength:`,
+		type: `Write the monster type of the YuGiOh card. 
+		Example:Warrior
+		YuGiOh card:"${name}"
+		Type:`,
+		attribute: `Write the attribute of the YuGiOh card.
+		Example:Fire
+		YuGiOh card:"${name}"
+		Attribute:`,
 	};
 	const configuration = new Configuration({
 		apiKey: `${process.env.REACT_APP_API_KEY}`
@@ -69,6 +79,7 @@ function DetailsGenerator() {
 	};
 
 	return (
+		<div>
 		<div className='app'>
 			<h1>YuGiOh Card Generator</h1>
 			{loading ? (
@@ -91,6 +102,8 @@ function DetailsGenerator() {
 			{displayResults()}
 			<p className='footer'>Powered by OpenAI</p>
 		</div>
+			<img src={results.image} width="100%" />
+			</div>
 	);
 }
 
