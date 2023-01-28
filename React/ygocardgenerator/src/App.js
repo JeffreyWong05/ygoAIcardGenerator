@@ -1,4 +1,5 @@
 import './App.css';
+import yugi from './images/yamiyugi.png';
 
 function App() {
   return (
@@ -10,15 +11,21 @@ function App() {
         <input type="submit" value="Submit" />
       </div>
 
-      <div className="yugiohTemplate">
-        <div className="nameAndAttribute">
-        <div className="yugName">
-          Zexi the Invoker
-        </div>
+      <div className="lcol">
+        <div className="yugiohTemplate">
+          <div className="nameAndAttribute">
+          <div className="yugName">
+            Zexi the Invoker
+          </div>
+
+          </div>
 
         </div>
-
+        
       </div>
+      <img className="yugiImg" 
+        src={yugi} 
+        alt="Uncle Yugi wants you!"></img>
     </div>
   );
 }

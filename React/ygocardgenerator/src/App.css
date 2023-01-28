@@ -28,10 +28,39 @@
   color: #61dafb;
 }
 
+.title {
+  font-family:'Courier New', Courier, monospace;
+  background-image: linear-gradient(to left, blue, green, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.entry {
+  color: white;
+  font-size: 18pt;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.lcol {
+  float: left;
+}
+
+.page {
+  background-image: url("./images/cardback.png");
+}
+
 .yugiohTemplate {
   background-image: url("./images/effectMonsterImage.png");
   width: 421px;
   height: 614px
+}
+
+.yugiImg {
+  float: 'right';
+  height: auto;
+  max-width: 40%;
+  padding-left: 20px;
 }
 
 .yugiohTemplate .nameAndAttribute {
