@@ -129,6 +129,9 @@ function App() {
       <div className="lcol">
         <div className="yugiohTemplate">
           <div className="nameAndAttribute">
+          <div class="flex-container">
+            {createLevelImage(levelNum)}
+          </div>
             <div className="yugName">
               {cardName}
             </div>
@@ -140,9 +143,7 @@ function App() {
             {displayResults()}
           </div>
           
-          <div class="flex-container">
-            {createLevelImage(levelNum)}
-          </div>
+          
 
         </div>
         
