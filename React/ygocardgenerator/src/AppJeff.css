@@ -1,72 +1,23 @@
-.flex-container {
-    display:flex;
+/*width: 421px;
+  height: 614px;
+*/
+
+.level-container {
+    display: flex;
     flex-direction: row-reverse;
+    margin-left: 10.45%;
+    /*10.45% 44px*/
+    margin-right: 10.45%;
+    /*10.45% 44px*/
+    margin-top: 2%;
+    /*2% 9px*/
 }
 
-.level1 {
-    padding-left: 0px;
-    padding-right: 45px;
-    padding-top: 7px;
-    
-}
-.level2 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-    
-}
-.level3 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level4 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level5 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level6 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level7 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level8 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level9 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level10 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level11 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-.level12 {
-    padding-left: 1px;
-    padding-right: 0px;
-    padding-top: 7px;
-}
-
-img {
-    width:27px;
-    height:27px;
+.levelIcon {
+    width: 7.5%;
+    /*7.25% 25px*/
+    height: 7.5%;
+    /*7.25% 25px*/
+    margin-left: 0.9%;
+    /*0.9% 3px*/
 }
