@@ -145,6 +145,14 @@ function App() {
 				</button>
       </div>
 
+	  <div className="entry">
+        <label>Make this a synchro?:</label>
+        <input className="monsterName" type="checkbox" onChange={(e) => setCardName(e.target.value)}/>
+        <button className='button' onClick={generateDetails}>
+					Generate Card
+				</button>
+      </div>
+
       <div className="lcol">
         <div className="yugiohTemplate">
           <div className="nameAndAttribute">
