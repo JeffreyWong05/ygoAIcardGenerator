@@ -1,45 +1,69 @@
-.App {
-  text-align: center;
+.title {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: linear-gradient(to left, blue, green, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.entry {
   color: white;
+  font-size: 18pt;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.lcol {
+  float: left;
+}
+
+.page {
+  background-image: url("./images/cardback.png");
+  overflow: auto;
 }
 
 .yugiohTemplate {
   background-image: url("./images/effectMonsterImage.png");
   width: 421px;
-  height: 614px
+  /*421px*/
+  height: 614px;
+  /*614px*/
+  overflow: hidden;
+}
+
+.yugiImg {
+  float: 'right';
+  height: auto;
+  max-width: 40%;
+  padding-left: 20px;
 }
 
 .yugiohTemplate .nameAndAttribute {
   font-weight: bold;
   font-size: 28px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 30px;
+  margin-left: 7.6%;
+  /*7.6% 32px*/
+  margin-right: 7.6%;
+  /*7.6% 32px*/
+  margin-top: 7.126%;
+  /*7.126% 30px*/
+  width: 84.8%;
+  /*84.8% 357px*/
+  height: 6%;
+  /*6% 37px*/
+  overflow: hidden;
+}
+
+.yugiohTemplate .yugName {
+  float: left;
+  width: 89.63%;
+  /*89.63% 320px*/
+  height: 100%;
+}
+
+.yugiohTemplate .attribute {
+  width: 10.36%;
+  /*10.36% 37px*/
+  height: 100%;
 }
 
 @keyframes App-logo-spin {
