@@ -74,10 +74,12 @@
   height: 100%;
 }
 
-.effectText {
-  width: 300px;
-  height: 200px;
-  font-size: 18px;
+.yugiohTemplate .effectText {
+  width: 85%;
+  height: 80px;
+  font-size: 13px;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 @keyframes App-logo-spin {
