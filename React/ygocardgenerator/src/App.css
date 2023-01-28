@@ -107,6 +107,14 @@
   margin-right: 8%;
 }
 
+.syncText {
+  width: 85%;
+  height: 70px;
+  font-size: 13px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
 .attackDefense {
   display: flex;
   margin-left: 63%;

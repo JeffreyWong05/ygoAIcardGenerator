@@ -187,13 +187,11 @@ function App() {
 	  <div className="entry">
         <label>Make this a synchro?:</label>
         <input disabled={loading} className="monsterName" type="checkbox" onChange={(e) => setSynchro(e.target.checked)}/>
-        <button disabled={loading} className='button' onClick={monsterBackground}>
-					reset.
-				</button>
+        
       </div>
 
       <div className="lcol">
-        <div className={synchro != true ? "yugiohTemplate": "synchroTemplate"}>
+        <div className={synchro !== true ? "yugiohTemplate": "synchroTemplate"}>
           <div className="nameAndAttribute">
 		  	<TextShrinker className="yugName" text={cardName} />
             {results.attribute.trim() === ""
@@ -210,10 +208,10 @@ function App() {
             ? <div className='cardType'/>
             : <div className='cardType'>{`[${results.type.toUpperCase()} ${someFunc()} / EFFECT ]`}</div>}
 
-		  {synchro != true ? <div className='effectMon'/>
+		  {synchro !== true ? <div className='effectMon'/>
 		  : <div className='synchron'>1 tuner + 1 or more non-tuner monsters</div>}
 
-		   <EffectText className="effectText" text={results.effect} />
+		   <EffectText className= {synchro !== true ? "effectText": "syncText" } text={results.effect} />
        <div className='attackDefense'>
         <div className='attack'>{results.atk}</div>
         <div>{results.def}</div>
