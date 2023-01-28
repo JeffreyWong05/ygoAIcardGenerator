@@ -166,9 +166,9 @@ function App() {
             : <div className='cardType'>{`[${results.type.toUpperCase()} ${someFunc()} / EFFECT ]`}</div>}
         </div>
 		<div style={{backgroundColor: "white"}}>
-            {displayResults()}
+		<EffectText></EffectText>
+            
           </div>
-        
         
       </div>
       <img className="yugiImg" 
@@ -177,5 +177,32 @@ function App() {
     </div>
   );
 }
+
+class EffectText extends React.Component {
+	constructor() {
+	  super();
+	  this.state = {};
+	}
+	componentDidMount() {
+		let fontSize = 18;
+		while (this.comp.clientHeight < this.comp.scrollHeight) {
+			fontSize--;
+			console.log('reducing font size');
+			console.log(this.comp.style.fontSize);
+			this.comp.style.fontSize = fontSize + 'px';
+			console.log(this.comp.style.fontSize);
+		}
+	}
+	
+	render() {
+	  return (
+		<div className="effectText" 
+			 ref={c => { this.comp = c; }}>
+			 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer justo mauris, dignissim quis bibendum id, condimentum id enim. Morbi viverra, velit et rutrum ultricies, urna eros finibus nisl, id feugiat sapien nisi quis lectus. Nunc vestibulum, nisl ac blandit luctus, purus arcu iaculis lacus, lobortis imperdiet lorem ligula eu leo. Aenean erat urna, sagittis ut viverra condimentum, dictum vitae diam. Donec tellus mi, congue eu felis quis, efficitur mollis leo. Nunc elementum, nisi eget tincidunt iaculis, lectus nibh vehicula orci, eu sollicitudin purus nulla sed felis. Sed ante velit, blandit eu lobortis vitae, mattis sed neque.
+			 </div>
+	  );
+	}
+  }
+
 
 export default App;
