@@ -34,3 +34,14 @@
     margin-left: 0.9%;
     /*0.9% 3px*/
 }
+
+.cardType {
+    margin-left: 7.13%;
+    /*7.13% 30px*/
+    margin-top: 5.5%;
+    /*5.5% 23px*/
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 82%;
+    /*82% 13px*/
+}
