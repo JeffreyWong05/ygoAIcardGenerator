@@ -35,6 +35,15 @@
   overflow: hidden;
 }
 
+.synchroTemplate {
+  background-image: url("./images/CardSynchroBackground.png");
+  width: 421px;
+  /*421px*/
+  height: 614px;
+  /*614px*/
+  overflow: hidden;
+}
+
 .yugiImg {
   float: 'right';
   height: auto;
@@ -42,7 +51,7 @@
   padding-left: 20px;
 }
 
-.yugiohTemplate .nameAndAttribute {
+.nameAndAttribute {
   font-weight: bold;
   font-size: 28px;
   margin-left: 7.6%;
@@ -58,7 +67,23 @@
   overflow: hidden;
 }
 
-.yugiohTemplate .yugName {
+.nameAndAttribute {
+  font-weight: bold;
+  font-size: 28px;
+  margin-left: 7.6%;
+  /*7.6% 32px*/
+  margin-right: 7.6%;
+  /*7.6% 32px*/
+  margin-top: 7.126%;
+  /*7.126% 30px*/
+  width: 84.8%;
+  /*84.8% 357px*/
+  height: 6%;
+  /*6% 37px*/
+  overflow: hidden;
+}
+
+.yugName {
   font-family: 'Times New Roman', Times, serif;
   float: left;
   width: 89.63%;
@@ -68,13 +93,13 @@
   vertical-align: middle;
 }
 
-.yugiohTemplate .attribute {
+.attribute {
   width: 10.36%;
   /*10.36% 37px*/
   height: 100%;
 }
 
-.yugiohTemplate .effectText {
+.effectText {
   width: 85%;
   height: 80px;
   font-size: 13px;

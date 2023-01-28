@@ -152,15 +152,25 @@ function App() {
 
   }
 
+  const monsterBackground = () => {
+
+  }
+
  const someFunc = () =>
  {
   console.log("tuner called");
   let isTuner = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
   
-  if(isTuner === 2){
-    return "/ TUNER";
+  let sync = "";
+
+  if(synchro != false) {
+	sync="/ SYNCHRO "
   }
-  return "";
+
+  if(isTuner === 2){
+    return sync + "/ TUNER";
+  }
+  return sync;
  }
 
   return (
@@ -176,14 +186,14 @@ function App() {
 
 	  <div className="entry">
         <label>Make this a synchro?:</label>
-        <input disabled={loading} className="monsterName" type="checkbox" onChange={(e) => setSynchro(e.target.value)}/>
-        <button disabled={loading} className='button' onClick={generateDetails}>
-					Is synchro
+        <input disabled={loading} className="monsterName" type="checkbox" onChange={(e) => setSynchro(e.target.checked)}/>
+        <button disabled={loading} className='button' onClick={monsterBackground}>
+					reset.
 				</button>
       </div>
 
       <div className="lcol">
-        <div className="yugiohTemplate">
+        <div className={synchro != true ? "yugiohTemplate": "synchroTemplate"}>
           <div className="nameAndAttribute">
 		  	<TextShrinker className="yugName" text={cardName} />
             {results.attribute.trim() === ""
@@ -199,6 +209,10 @@ function App() {
       	  {results.type === ""
             ? <div className='cardType'/>
             : <div className='cardType'>{`[${results.type.toUpperCase()} ${someFunc()} / EFFECT ]`}</div>}
+
+		  {synchro != true ? <div className='effectMon'/>
+		  : <div className='synchron'>1 tuner + 1 or more non-tuner monsters</div>}
+
 		   <EffectText className="effectText" text={results.effect} />
        <div className='attackDefense'>
         <div className='attack'>{results.atk}</div>
