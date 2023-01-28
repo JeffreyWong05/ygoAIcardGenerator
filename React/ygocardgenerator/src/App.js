@@ -12,8 +12,8 @@ function App() {
 
   const [cardName, setCardName] = useState('');
   const [results, setResults] = useState({
+    image: '',
 		effect: '',
-		image: '',
 		level: '1',
     type: '',
 		attribute: '',
@@ -33,14 +33,12 @@ function App() {
     "": null,
   }
   const prompts = {
+    image: `${cardName}, digital art`,
 		effect: `Write a YuGiOh effect for a card named "${cardName}"
         Effect:`,
-		image: `${cardName}, digital art`,
-		level: `Rate the YuGiOh card\'s strength. 
-		Desired format:
-		Strength:<a number that is greater 0 but less than 13>
-        YuGiOh card:"${cardName}"
-        Strength:`,
+		level: `Write the level of the YuGiOh card.
+    Desired format: <number between 1 and 12>
+    YuGiOh card:"${cardName}"`,
 		type: `Write the monster type of the YuGiOh card. 
 		Example:Warrior
 		YuGiOh card:"${cardName}"
@@ -66,8 +64,8 @@ function App() {
   {
     console.log("generate");
     setResults({
-      effect: '',
       image: '',
+      effect: '',
       level: '1',
       type: '',
       attribute: '',
@@ -97,7 +95,17 @@ function App() {
 					top_p: 1,
 					frequency_penalty: 1,
 					presence_penalty: 1
-				});
+        });
+        if (key == 'level')
+        {
+          if (isNaN(response.data.choices[0].text) || parseInt(response.data.choices[0].text) < 1 || parseInt(response.data.choices[0].text) > 12)
+          {
+            setResults((prevResults) => ({
+              ...prevResults,
+              ['level']: Math.floor(Math.random() * 12 + 1)
+            }))
+          }
+        }
 				setResults((prevResults) => ({
 					...prevResults,
 					[key]: response.data.choices[0].text
@@ -112,9 +120,6 @@ function App() {
 			<div>
 				{key}
 				{results[key]}
-				{results.attribute.toLowerCase()}
-				{attributeDict[results.attribute.toLowerCase()]}
-				{results.attribute.toLowerCase().length}
 				<br />
 				<br />
 			</div>
