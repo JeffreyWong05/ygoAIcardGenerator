@@ -9,10 +9,10 @@ function EffectText({className, text}) {
 
 	useEffect(() => {
 		console.log(text)
-		let fontSize = 28;
+		let fontSize = 13;
 		console.log(ref.current.clientHeight)
 		console.log(ref.current.scrollHeight)
-		while (37 < ref.current.scrollHeight) {
+		while (ref.current.clientHeight < ref.current.scrollHeight) {
 			fontSize--;
 			console.log('reducing font size');
 			console.log(ref.current.style.fontSize);
@@ -23,7 +23,8 @@ function EffectText({className, text}) {
 	  
 	return (
 		<div
-			ref={c => { ref.current = c; }}>
+			ref={c => { ref.current = c; }}
+			className={className}>
 			{text}
 		</div>
 	);

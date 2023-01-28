@@ -7,6 +7,7 @@ import yugi from './images/yamiyugi.png';
 import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import TextShrinker from './TextShrinker';
+import EffectText from './EffectText';
 
 function App() {
 
@@ -178,9 +179,10 @@ function App() {
 		  {results.image === "" 
             ? <div className='cardImage'/> 
             : <img src={results.image} className="cardImage"></img>}
-      {results.type === ""
+      	  {results.type === ""
             ? <div className='cardType'/>
             : <div className='cardType'>{`[${results.type.toUpperCase()} ${someFunc()} / EFFECT ]`}</div>}
+		   <EffectText className="effectText" text={results.effect} />
         </div>
 		<div style={{backgroundColor: "white"}}>
 		{displayResults()}

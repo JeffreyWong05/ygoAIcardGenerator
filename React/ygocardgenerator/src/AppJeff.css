@@ -36,12 +36,13 @@
 }
 
 .cardType {
-    margin-left: 7.13%;
+    margin-left: 8%;
     /*7.13% 30px*/
-    margin-top: 5.5%;
+    margin-top: 6%;
     /*5.5% 23px*/
-    font-weight: bolder;
+    font-weight: 1000;
     font-family: "Times New Roman", Times, serif;
-    font-size: 82%;
+    height: 15px;
+    font-size: 13px;
     /*82% 13px*/
 }
