@@ -6,6 +6,7 @@ import './App.css';
 import yugi from './images/yamiyugi.png';
 import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
+import TextShrinker from './TextShrinker';
 
 function App() {
 
@@ -15,7 +16,9 @@ function App() {
 		image: '',
 		level: '1',
     type: '',
-		attribute: ''
+		attribute: '',
+    atk: '0',
+    def:'0'
 	});
 	const [loading, setLoading] = useState(false);
 
@@ -46,6 +49,12 @@ function App() {
 		Example:Fire
 		YuGiOh card:"${cardName}"
 		Attribute:`,
+    atk:`Write the attack value for the YuGiOh card.
+		YuGiOh card:"${cardName}"
+		Attack:`,
+		def:`Write the defense value for the YuGiOh card.
+		YuGiOh card:"${cardName}"
+		Defense:`
 	};
 	const configuration = new Configuration({
 		apiKey: `${process.env.REACT_APP_API_KEY}`
@@ -61,7 +70,9 @@ function App() {
       image: '',
       level: '1',
       type: '',
-      attribute: ''
+      attribute: '',
+      atk: '0',
+      def:'0'
     });
 		setLoading(true);
 		let response;
@@ -99,10 +110,13 @@ function App() {
 	const displayResults = () => {
 		return Object.keys(results).map((key) => (
 			<div>
+				{key}
 				{results[key]}
+				{results.attribute.toLowerCase()}
+				{attributeDict[results.attribute.toLowerCase()]}
+				{results.attribute.toLowerCase().length}
 				<br />
 				<br />
-        {results.attribute.toLowerCase()}
 			</div>
 		));
 	};
@@ -139,7 +153,7 @@ function App() {
       <h1 className="title">Yugioh Card Generator</h1>
       <div className="entry">
         <label>Enter Card Name:</label>
-        <input className="monsterName" type="text" onChange={(e) => setCardName(e.target.value)}/>
+        <input className="monsterName" type="text" maxLength="33" onChange={(e) => setCardName(e.target.value)}/>
         <button className='button' onClick={generateDetails}>
 					Generate Card
 				</button>
@@ -156,12 +170,10 @@ function App() {
       <div className="lcol">
         <div className="yugiohTemplate">
           <div className="nameAndAttribute">
-            <div className="yugName">
-              {cardName}
-            </div>
-            {results.attribute.toLowerCase() === "" 
+		  	<TextShrinker className="yugName" text={cardName} />
+            {results.attribute.trim() === "" 
             ? null 
-            : <img src={attributeDict[results.attribute.toLowerCase()]} className="attribute"></img>}
+            : <img src={attributeDict[results.attribute.toLowerCase().trim()]} className="attribute"></img>}
           </div>
 		  <div class="level-container">
             {createLevelImage(parseInt(results.level))}
@@ -174,7 +186,7 @@ function App() {
             : <div className='cardType'>{`[${results.type.toUpperCase()} ${someFunc()} / EFFECT ]`}</div>}
         </div>
 		<div style={{backgroundColor: "white"}}>
-		<EffectText></EffectText>
+		{displayResults()}
             
           </div>
         
@@ -185,32 +197,5 @@ function App() {
     </div>
   );
 }
-
-class EffectText extends React.Component {
-	constructor() {
-	  super();
-	  this.state = {};
-	}
-	componentDidMount() {
-		let fontSize = 18;
-		while (this.comp.clientHeight < this.comp.scrollHeight) {
-			fontSize--;
-			console.log('reducing font size');
-			console.log(this.comp.style.fontSize);
-			this.comp.style.fontSize = fontSize + 'px';
-			console.log(this.comp.style.fontSize);
-		}
-	}
-	
-	render() {
-	  return (
-		<div className="effectText" 
-			 ref={c => { this.comp = c; }}>
-			 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer justo mauris, dignissim quis bibendum id, condimentum id enim. Morbi viverra, velit et rutrum ultricies, urna eros finibus nisl, id feugiat sapien nisi quis lectus. Nunc vestibulum, nisl ac blandit luctus, purus arcu iaculis lacus, lobortis imperdiet lorem ligula eu leo. Aenean erat urna, sagittis ut viverra condimentum, dictum vitae diam. Donec tellus mi, congue eu felis quis, efficitur mollis leo. Nunc elementum, nisi eget tincidunt iaculis, lectus nibh vehicula orci, eu sollicitudin purus nulla sed felis. Sed ante velit, blandit eu lobortis vitae, mattis sed neque.
-			 </div>
-	  );
-	}
-  }
-
 
 export default App;
