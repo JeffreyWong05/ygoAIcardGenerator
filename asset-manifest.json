@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/JeffreyWong05/ygoAIcardGenerator/static/css/main.931126bb.css",
-    "main.js": "/JeffreyWong05/ygoAIcardGenerator/static/js/main.df2addb3.js",
+    "main.js": "/JeffreyWong05/ygoAIcardGenerator/static/js/main.a7e61e87.js",
     "static/js/787.82d80a07.chunk.js": "/JeffreyWong05/ygoAIcardGenerator/static/js/787.82d80a07.chunk.js",
     "static/media/yamiyugi.png": "/JeffreyWong05/ygoAIcardGenerator/static/media/yamiyugi.aeb349acae349b99a74b.png",
     "static/media/cardback.png": "/JeffreyWong05/ygoAIcardGenerator/static/media/cardback.88da629c1b60a26718fa.png",
@@ -17,11 +17,11 @@
     "static/media/logo.svg": "/JeffreyWong05/ygoAIcardGenerator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/JeffreyWong05/ygoAIcardGenerator/index.html",
     "main.931126bb.css.map": "/JeffreyWong05/ygoAIcardGenerator/static/css/main.931126bb.css.map",
-    "main.df2addb3.js.map": "/JeffreyWong05/ygoAIcardGenerator/static/js/main.df2addb3.js.map",
+    "main.a7e61e87.js.map": "/JeffreyWong05/ygoAIcardGenerator/static/js/main.a7e61e87.js.map",
     "787.82d80a07.chunk.js.map": "/JeffreyWong05/ygoAIcardGenerator/static/js/787.82d80a07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.931126bb.css",
-    "static/js/main.df2addb3.js"
+    "static/js/main.a7e61e87.js"
   ]
 }
