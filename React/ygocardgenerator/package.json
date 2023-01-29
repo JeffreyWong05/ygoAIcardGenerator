@@ -1,7 +1,7 @@
 {
   "name": "ygocardgenerator",
   "version": "0.1.0",
-  "homepage": "https://github.com/JeffreyWong05/ygoAIcardGenerator",
+  "homepage": "https://JeffreyWong05.github.io/ygoAIcardGenerator",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
