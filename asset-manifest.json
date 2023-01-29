@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/JeffreyWong05/ygoAIcardGenerator5o6/static/css/main.96809fe0.css",
-    "main.js": "/JeffreyWong05/ygoAIcardGenerator5o6/static/js/main.f5ccc859.js",
-    "static/js/787.82d80a07.chunk.js": "/JeffreyWong05/ygoAIcardGenerator5o6/static/js/787.82d80a07.chunk.js",
-    "static/media/yamiyugi.png": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/yamiyugi.aeb349acae349b99a74b.png",
-    "static/media/cardback.png": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/cardback.88da629c1b60a26718fa.png",
-    "static/media/effectMonsterImage.png": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/effectMonsterImage.d0c01b09a8c135808c6a.png",
-    "static/media/Water.png": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/Water.b386c419a39c2b9ec11c.png",
-    "static/media/CardSynchroBackground.png": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/CardSynchroBackground.02820028aa950017b0a4.png",
-    "static/media/Wind.webp": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/Wind.5677520d7cbcff754742.webp",
-    "static/media/Dark.webp": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/Dark.5a7e41b0c883fcff66b2.webp",
-    "static/media/Fire.webp": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/Fire.6ff1d09ca085ca820836.webp",
-    "static/media/Divine.webp": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/Divine.34b787f036d9061df199.webp",
-    "static/media/Earth.webp": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/Earth.5c093a3388fe16a02699.webp",
-    "static/media/Light.webp": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/Light.f3ef2feecbf625318dd2.webp",
-    "static/media/logo.svg": "/JeffreyWong05/ygoAIcardGenerator5o6/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/JeffreyWong05/ygoAIcardGenerator5o6/index.html",
-    "main.96809fe0.css.map": "/JeffreyWong05/ygoAIcardGenerator5o6/static/css/main.96809fe0.css.map",
-    "main.f5ccc859.js.map": "/JeffreyWong05/ygoAIcardGenerator5o6/static/js/main.f5ccc859.js.map",
-    "787.82d80a07.chunk.js.map": "/JeffreyWong05/ygoAIcardGenerator5o6/static/js/787.82d80a07.chunk.js.map"
+    "main.css": "/JeffreyWong05/ygoAIcardGenerator/static/css/main.931126bb.css",
+    "main.js": "/JeffreyWong05/ygoAIcardGenerator/static/js/main.df2addb3.js",
+    "static/js/787.82d80a07.chunk.js": "/JeffreyWong05/ygoAIcardGenerator/static/js/787.82d80a07.chunk.js",
+    "static/media/yamiyugi.png": "/JeffreyWong05/ygoAIcardGenerator/static/media/yamiyugi.aeb349acae349b99a74b.png",
+    "static/media/cardback.png": "/JeffreyWong05/ygoAIcardGenerator/static/media/cardback.88da629c1b60a26718fa.png",
+    "static/media/effectMonsterImage.png": "/JeffreyWong05/ygoAIcardGenerator/static/media/effectMonsterImage.d0c01b09a8c135808c6a.png",
+    "static/media/Water.png": "/JeffreyWong05/ygoAIcardGenerator/static/media/Water.b386c419a39c2b9ec11c.png",
+    "static/media/CardSynchroBackground.png": "/JeffreyWong05/ygoAIcardGenerator/static/media/CardSynchroBackground.02820028aa950017b0a4.png",
+    "static/media/Wind.webp": "/JeffreyWong05/ygoAIcardGenerator/static/media/Wind.5677520d7cbcff754742.webp",
+    "static/media/Dark.webp": "/JeffreyWong05/ygoAIcardGenerator/static/media/Dark.5a7e41b0c883fcff66b2.webp",
+    "static/media/Fire.webp": "/JeffreyWong05/ygoAIcardGenerator/static/media/Fire.6ff1d09ca085ca820836.webp",
+    "static/media/Divine.webp": "/JeffreyWong05/ygoAIcardGenerator/static/media/Divine.34b787f036d9061df199.webp",
+    "static/media/Earth.webp": "/JeffreyWong05/ygoAIcardGenerator/static/media/Earth.5c093a3388fe16a02699.webp",
+    "static/media/Light.webp": "/JeffreyWong05/ygoAIcardGenerator/static/media/Light.f3ef2feecbf625318dd2.webp",
+    "static/media/logo.svg": "/JeffreyWong05/ygoAIcardGenerator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/JeffreyWong05/ygoAIcardGenerator/index.html",
+    "main.931126bb.css.map": "/JeffreyWong05/ygoAIcardGenerator/static/css/main.931126bb.css.map",
+    "main.df2addb3.js.map": "/JeffreyWong05/ygoAIcardGenerator/static/js/main.df2addb3.js.map",
+    "787.82d80a07.chunk.js.map": "/JeffreyWong05/ygoAIcardGenerator/static/js/787.82d80a07.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96809fe0.css",
-    "static/js/main.f5ccc859.js"
+    "static/css/main.931126bb.css",
+    "static/js/main.df2addb3.js"
   ]
 }
